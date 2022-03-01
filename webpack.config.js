@@ -30,5 +30,6 @@ module.exports = {
   ],
   devServer: {
     static: './dist',
+    watchFiles: ['src/**/*.html'],
   },
 };
