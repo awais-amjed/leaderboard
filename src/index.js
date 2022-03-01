@@ -10,7 +10,7 @@ if (kraken.scores.length === 0) {
       `;
 }
 
-document.getElementById('score-form').addEventListener('submit',(e) => {
+document.getElementById('score-form').addEventListener('submit', (e) => {
   e.preventDefault();
   scoreFormEventListener(kraken);
 });
