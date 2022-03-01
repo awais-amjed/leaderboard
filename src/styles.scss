@@ -46,6 +46,9 @@ main {
     #scores-table {
       border: 3px solid black;
       border-radius: 5px;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
 
       li {
         padding: $padding;
@@ -53,6 +56,10 @@ main {
 
       li:nth-child(2n + 1) {
         background-color: $list-item-background;
+      }
+
+      .empty-table {
+        margin: auto;
       }
     }
   }
