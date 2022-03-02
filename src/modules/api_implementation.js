@@ -13,4 +13,22 @@ const getScores = async (gameID) => fetch(`${baseURL}/games/${gameID}/scores/`, 
   return null;
 });
 
-export { getScores };
+const addNewScore = async (gameID, {
+  name, score,
+}) => fetch(`${baseURL}/games/${gameID}/scores/`, {
+  method: 'POST',
+  body: JSON.stringify({
+    name,
+    score,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+}).then(async (response) => {
+  if (response.status === 200) {
+    return true;
+  }
+  return null;
+});
+
+export { getScores, addNewScore };
