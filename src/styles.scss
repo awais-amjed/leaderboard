@@ -35,7 +35,7 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 300px;
+    max-width: 500px;
     gap: 40px;
 
     #scores-heading {
@@ -49,6 +49,7 @@ main {
       min-height: 150px;
       display: flex;
       flex-direction: column;
+      max-height: 300px;
 
       li {
         padding: $padding;
@@ -58,7 +59,7 @@ main {
         background-color: $list-item-background;
       }
 
-      .empty-table {
+      .centered-text {
         margin: auto;
       }
     }

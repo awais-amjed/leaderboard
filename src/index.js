@@ -1,16 +1,19 @@
 import './styles.scss';
 import Kraken from './modules/kraken.js';
-import { scoreFormEventListener } from './modules/html_functions.js';
+import { scoreFormEventListener, refreshButtonEventListener } from './modules/html_functions.js';
 
 const kraken = new Kraken();
 
-if (kraken.scores.length === 0) {
-  document.getElementById('scores-table').innerHTML = `
-        <p class="empty-table">No Scores yet.</p>
-      `;
-}
+document.getElementById('scores-table').innerHTML = `
+  <p class="centered-text">Press Refresh to get the Latest Scores.</p>
+`;
 
-document.getElementById('score-form').addEventListener('submit', (e) => {
+document.getElementById('score-form').addEventListener('submit', async (e) => {
   e.preventDefault();
-  scoreFormEventListener(kraken);
+  await scoreFormEventListener(kraken);
+});
+
+document.getElementById('refresh-button').addEventListener('click', async (e) => {
+  e.preventDefault();
+  await refreshButtonEventListener(kraken);
 });
