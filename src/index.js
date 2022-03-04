@@ -1,6 +1,8 @@
 import './styles.scss';
 import Kraken from './modules/kraken.js';
 import { scoreFormEventListener, refreshButtonEventListener } from './modules/html_functions.js';
+import './assets/images/kraken.png';
+import './assets/images/loading-bar.png';
 
 const kraken = new Kraken();
 
