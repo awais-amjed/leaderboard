@@ -38,8 +38,24 @@ button {
   background-color: $background;
 }
 
+button {
+  box-shadow: 3px 3px black;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
 input::placeholder {
   color: #d5d5d5;
+}
+
+input:focus {
+  outline: none;
 }
 
 ul {
