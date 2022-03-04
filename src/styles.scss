@@ -22,11 +22,17 @@ header {
   margin: 30px 5% 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
 
   h1 {
     color: black;
+    text-align: center;
+  }
+
+  img:nth-child(3) {
+    display: none;
   }
 }
 
@@ -66,6 +72,9 @@ main {
   padding: 50px 10% 20px;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 
   #recent-scores {
     background-color: $card-background;
@@ -75,7 +84,8 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 500px;
+    min-width: 250px;
+    max-width: 300px;
     gap: 40px;
 
     ::-webkit-scrollbar {
@@ -114,6 +124,7 @@ main {
 
       .centered-text {
         margin: auto;
+        text-align: center;
       }
     }
   }
@@ -121,6 +132,8 @@ main {
   #add-your-score {
     background-color: $card-background;
     padding: 50px;
+    min-width: 250px;
+    max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     flex-grow: 1;
@@ -128,7 +141,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    max-width: 300px;
 
     #score-form {
       display: flex;
@@ -140,6 +152,32 @@ main {
       button[type=submit] {
         align-self: end;
       }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  header {
+    flex-direction: row;
+    gap: 50px;
+
+    img:nth-child(3) {
+      display: block;
+    }
+  }
+
+  main {
+    align-items: inherit;
+    flex-direction: row;
+
+    #recent-scores {
+      min-width: 400px;
+      max-width: none;
+    }
+
+    #add-your-score {
+      min-width: 150px;
+      max-width: none;
     }
   }
 }
