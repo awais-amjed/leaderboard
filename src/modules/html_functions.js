@@ -47,7 +47,7 @@ const scoreFormEventListener = async (kraken) => {
 const refreshButtonEventListener = async (kraken) => {
   const scoresTable = document.getElementById('scores-table');
   scoresTable.innerHTML = `
-    <p class="centered-text">Loading ...</p>
+    <p class="centered-text"><img src="./assets/images/loading-bar.png" alt="" width="70"></p>
   `;
 
   const data = await KrakenAPI.getScores(kraken.gameID);
