@@ -89,6 +89,8 @@ main {
       overflow-y: auto;
 
       li {
+        display: flex;
+        justify-content: space-between;
         padding: $padding;
       }
 

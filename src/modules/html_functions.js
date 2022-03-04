@@ -8,7 +8,7 @@ const addRecentScore = (kraken, {
 
   const newScoreElement = document.createElement('li');
   newScoreElement.innerHTML = `
-    <p>${name}: ${score}</p>
+    <p>${name}</p><p>${score}</p>
   `;
 
   if (kraken.scores.length === 0) {
