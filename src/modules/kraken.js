@@ -1,7 +1,7 @@
 export default class Kraken {
   scores = [];
 
-  gameID = 'lXsI44Imhn886rk4uGOx';
+  gameID = 'rXsiRnCQjdB5JNjPRRQN';
 
   addNewScore = (score) => {
     this.scores.push(score);
